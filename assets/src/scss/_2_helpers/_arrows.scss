@@ -1,0 +1,121 @@
+/*------------------------------------*\
+    #ARROWS
+\*------------------------------------*/
+
+// Reference http://css-tricks.com/snippets/css/css-triangle/
+@mixin arrow ($direction, $size, $color) {
+	@if $direction == up {
+		border-left: $size solid transparent;
+		border-right: $size solid transparent;
+		border-bottom: $size solid $color;
+	} @else if $direction == down {
+		border-left: $size solid transparent;
+		border-right: $size solid transparent;
+		border-top: $size solid $color;
+	} @else if $direction == right {
+		border-top: $size solid transparent;
+		border-bottom: $size solid transparent;
+		border-left: $size solid $color;
+	} @else if $direction == left {
+		border-top: $size solid transparent;
+		border-bottom: $size solid transparent;
+		border-right:$size solid $color;
+	}
+}
+
+
+
+
+
+// Reference: http://codepen.io/mnakalay/pen/oqLfC
+@mixin ribbon ($size, $color, $rollover, $direction) {
+	background: $color;
+	color: white;
+	display: inline-block;
+	line-height: emCalc(38px);
+	padding-top: 4px;
+	position: relative;
+	text-align: center;
+	width: 50%;
+
+	&:before,
+	&:after {
+		border: solid transparent;
+		content: " ";
+		height: 0;
+		position: absolute;
+		width: 0;
+	}
+
+	// RIGHT
+	@if $direction == right {
+		
+		&:after {
+			border-color: rgba(66, 170, 225, 0);
+			border-width: 21px;
+			left: 100%;
+			margin-top: -21px;
+			pointer-events: none;
+			top: 50%;
+			border-left-color: $color;
+			border-left-color: $color;
+		}
+
+		&:hover {
+			background: $rollover;
+
+			&:after { 
+				border-left-color: $rollover;
+			}
+		}
+
+		&:before {
+			left: 0;
+			pointer-events: none;
+			border-color: rgba(66, 170, 225, 0);
+			border-width: 30px;
+			top: 50%;
+			margin-top: -30px;
+			border-left-color: white;
+		}
+	
+	
+	// LEFT
+	} @else {
+
+		&:before {
+			border-color: rgba(66, 170, 225, 0);
+			border-width: 21px;
+			right: 100%;
+			margin-top: -21px;
+			pointer-events: none;
+			top: 50%;
+			border-right-color: $color;
+			border-right-color: $color;
+		}
+
+		&:hover {
+			background: $rollover;
+
+			&:before { 
+				border-right-color: $rollover;
+			}
+		}
+
+		&:after {
+			right: 0;
+			pointer-events: none;
+			border-color: rgba(66, 170, 225, 0);
+			border-width: 30px;
+			top: 50%;
+			margin-top: -30px;
+			border-right-color: white;
+		}
+
+	}
+
+}
+
+
+
+

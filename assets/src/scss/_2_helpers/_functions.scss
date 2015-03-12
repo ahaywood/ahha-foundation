@@ -1,0 +1,13 @@
+/*------------------------------------*\
+    #FUNCTIONS
+\*------------------------------------*/
+
+@function path($src, $dir: img) {
+	$src: unquote($src);
+	@return url(unquote("..")/$dir/$src);
+}
+
+
+@function grayscale($value) {
+  @return #{ "grayscale(" + $value + ")" };
+}
