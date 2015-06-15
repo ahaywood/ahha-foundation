@@ -4,19 +4,14 @@
 
 /**
  * CLEARFIX
+ * Should be placed on the parent item
+ * https://css-tricks.com/snippets/css/clear-fix/
  */
-%clearfix:before
-%clearfix:after { 
-	content: " "; 
-	display: table; 
-}
-
-%clearfix:after { 
-	clear: both; 
-}
-
-%clearfix { 
-	*zoom: 1; 
+%clearfix:after,
+.clearfix:after { 
+  content: "";
+  display: table;
+  clear: both;
 }
 
 
@@ -87,3 +82,34 @@
 	border-radius: 50em;
 }
 
+
+
+
+
+
+/**
+ * HAMBURGER
+ * Reference: https://css-tricks.com/three-line-menu-navicon/
+ */
+%hamburger,
+.hamburger {
+	position: relative;
+	padding-left: 1.5em;
+
+	&:before {
+		content: "";
+		position: absolute;
+		left: 0;
+		top: 0.21em;
+		bottom: 0.21em;
+		width: 1.25em;
+		background: linear-gradient(
+	    	to bottom, 
+	    	black, black 15%, 
+	    	transparent 15%, transparent 43%, 
+	    	black 43%, black 58%, 
+	    	transparent 58%, transparent 85%, 
+	    	black 85%, black 100%
+	  	);
+	}
+}
