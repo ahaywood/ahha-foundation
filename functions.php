@@ -404,8 +404,6 @@ add_shortcode('html5_shortcode_demo_2', 'html5_shortcode_demo_2'); // Place [htm
 function create_post_type_html5()
 {
     /*
-    register_taxonomy_for_object_type('category', 'html5-blank'); // Register Taxonomies for Category
-    register_taxonomy_for_object_type('post_tag', 'html5-blank');
     register_post_type('html5-blank', // Register Custom Post Type
         array(
         'labels' => array(
@@ -431,12 +429,18 @@ function create_post_type_html5()
             'excerpt',
             'thumbnail'
         ), // Go to Dashboard Custom HTML5 Blank post for supports
-        'can_export' => true, // Allows export in Tools > Export
-        'taxonomies' => array(
-            'post_tag',
-            'category'
-        ) // Add Category and Post Tags support
+        'menu_icon' => 'dashicons-format-status',   // http://www.kevinleary.net/wordpress-dashicons-list-custom-post-type-icons/
+        'can_export' => true // Allows export in Tools > Export
     ));
+    register_taxonomy(
+        'type_of_staff',    // Taxonomy
+        'staff',             // Object Type
+        array(
+            'label' => __( 'Type' ),
+            'rewrite' => array( 'slug' => 'type' ),
+            'hierarchical' => true, // Is this taxonomy hierarchical like categories or not hierarchical like tags.
+        )
+    );
     */
 }
 
