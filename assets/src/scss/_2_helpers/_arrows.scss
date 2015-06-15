@@ -119,3 +119,22 @@
 
 
 
+/* Angled Bracket 
+Reference: http://stackoverflow.com/questions/27492191/how-to-make-a-fancy-arrow-using-css */
+@mixin angled-bracket($direction: right, $color: black) {
+	display: inline-block;
+  	font-style: normal;
+  	position: relative;
+    top: 2pt;
+    width: 25px;
+    height: 25px;
+    border-right: 7px solid $color;
+    border-top: 7px solid $color;
+
+    @if $direction == right {
+	    transform: rotate(45deg);
+		left: -13px;
+	} @else if $direction == left {
+		transform: rotate(-135deg);
+	}
+}
