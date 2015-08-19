@@ -1,0 +1,18 @@
+/**
+ * JUSTIFIED NAV
+ * place on the ul tag
+ */
+ul {
+	@extend %no-margin-padding;
+	@extend %no-bullets;
+	text-align: justify;
+
+	li {
+		display: inline-block;
+
+		&.stretch {
+			display: inline-block;
+			width: 100%;
+		}
+	}
+}
