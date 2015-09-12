@@ -6,6 +6,42 @@
 	column-count: $columns; 
 }
 
+/* 
+	ASPECT RATIOS: https://css-tricks.com/snippets/sass/maintain-aspect-ratio-mixin/
+	The mixin assumes you'll be nesting an element with the class of content inside your initial block.
+
+	HTML:
+	<div class="sixteen-nine">
+		<div class="content">
+	    	insert content here
+	    	this will maintain a 16:9 aspect ratio
+	  	</div>
+	</div>
+
+	Using the mixin:
+	.sixteen-nine {
+		@include aspect-ratio(16, 9);
+	}
+*/
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
+
+  > .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  } 
+}
+
 // REFERENCE http://css-tricks.com/snippets/css/css-triangle/
 @mixin arrow ($direction, $size, $color) {
 	@if $direction == up {
