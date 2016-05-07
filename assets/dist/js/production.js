@@ -1,0 +1,1 @@
+function SiteController(n){function t(){n(document).foundation()}return self.init=function(){t()},self}jQuery(function(n){var t=new SiteController(n);t.init()});
