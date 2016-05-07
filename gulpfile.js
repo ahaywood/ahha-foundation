@@ -56,7 +56,7 @@ gulp.task('styles', function() {
 	gulp.src('assets/src/scss/main.scss')
 		.pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
 		.pipe(sass({
-			includePaths: ['bower_components/foundation/scss']
+			includePaths: ['bower_components/foundation-sites/scss']
 		}) )
 		.pipe(prefix("last 2 versions"))
 		.pipe(minifyCSS())

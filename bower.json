@@ -12,7 +12,7 @@
     "test",
     "tests"
   ],
-  "dependencies": {
-    "foundation": "~5.4.3"
+  "devDependencies": {
+    "foundation-sites": "^6.2.1"
   }
 }
