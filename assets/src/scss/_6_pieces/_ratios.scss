@@ -1,0 +1,50 @@
+/*------------------------------------*\
+    #RATIOS
+    Reference: http://www.mademyday.de/css-height-equals-width-with-pure-css.html
+
+    DOM should look like this:
+    	| <div class="ratio__box"> 
+		| 	<div class="ratio__content">Aspect ratio of 1:1</div> 
+		| </div>
+
+	** Just remember, these are set up as extends and not as actual class names **
+\*------------------------------------*/
+
+%ratio__box {
+	position: relative;
+	width: 50%; /* desired width */
+	
+	&:before {
+		content: '';
+		display: block;
+		padding-top: 100%; /* initial ratio of 1:1 */
+	}
+
+	/* 2:1 */
+	&.ratio2_1:before {
+		padding-top: 50%;
+	}
+
+	/* 1:2 */
+	&.ratio1_2:before {
+		padding-top: 200%;
+	}
+
+	/* 3:4 */
+	&.ratio3_4:before {
+		padding-top: 75%;
+	}
+
+	/* 16:9 */
+	&.ratio16_9:before {
+		padding-top: 56.25%;
+	}
+}
+
+%ratio__content {
+	bottom: 0;
+	left: 0;
+	right: 0;
+	position: absolute;
+	top: 0;
+}
