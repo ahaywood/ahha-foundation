@@ -13,6 +13,7 @@
     "tests"
   ],
   "devDependencies": {
-    "foundation-sites": "^6.2.1"
+    "foundation-sites": "^6.2.1",
+    "jquery.fitvids": "fitvids#^1.1.0"
   }
 }
