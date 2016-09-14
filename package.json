@@ -4,18 +4,22 @@
   "author": "Amy (Haywood) Dutton",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ahaywood/ahha-wpstart.git"
+    "url": "https://github.com/ahaywood/projectname.git"
   },
   "devDependencies": {
+    "babel-register": "^6.14.0",
+    "browser-sync": "^2.14.0",
     "cheerio": "^0.18.0",
+    "del": "^2.2.2",
     "gulp": "^3.8.8",
     "gulp-autoprefixer": "^1.0.1",
     "gulp-cache": "^0.2.2",
     "gulp-cheerio": "^0.5.1",
+    "gulp-chug": "^0.5.1",
     "gulp-concat": "^2.4.1",
     "gulp-filesize": "0.0.6",
     "gulp-filter": "^1.0.2",
-    "gulp-imagemin": "^1.0.1",
+    "gulp-imagemin": "^2.3.0",
     "gulp-include": "^1.0.1",
     "gulp-inject": "^1.1.1",
     "gulp-livereload": "^2.1.1",
@@ -23,13 +27,13 @@
     "gulp-notify": "^1.8.0",
     "gulp-plumber": "^0.6.5",
     "gulp-rename": "^1.2.0",
-    "gulp-sass": "^2.3.1",
+    "gulp-sass": "^2.3.2",
     "gulp-svg-sprites": "^1.0.3",
-    "gulp-svg2png": "^0.3.0",
     "gulp-svgmin": "^1.1.2",
-    "gulp-svgstore": "^5.0.1",
+    "gulp-svgstore": "^6.0.0",
     "gulp-uglify": "^1.0.1",
     "gulp-watch": "^1.0.7",
-    "imagemin-pngquant": "^4.0.0"
+    "imagemin-pngquant": "^4.0.0",
+    "node-gyp": "^3.4.0"
   }
 }
