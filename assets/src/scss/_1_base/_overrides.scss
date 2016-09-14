@@ -9,7 +9,12 @@
 	
 	.column,
 	.columns {
-		padding: 0; }
+		padding: 0; 
+
+		@media (max-width: 640px)  { 
+			padding: 0 15px;
+		}
+	}
 }
 
 .columns.no-margin { 
