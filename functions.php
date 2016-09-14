@@ -147,16 +147,16 @@ function remove_category_rel_from_category_list($thelist)
 function add_slug_to_body_class($classes)
 {
     global $post;
-    if (is_home()) {
-        $key = array_search('blog', $classes);
-        if ($key > -1) {
-            unset($classes[$key]);
-        }
-    } elseif (is_page()) {
-        $classes[] = sanitize_html_class($post->post_name);
-    } elseif (is_singular()) {
-        $classes[] = sanitize_html_class($post->post_name);
-    }
+    // if (is_home()) {
+    //     $key = array_search('blog', $classes);
+    //     if ($key > -1) {
+    //         unset($classes[$key]);
+    //     }
+    // } elseif (is_page()) {
+    //     $classes[] = sanitize_html_class($post->post_name);
+    // } elseif (is_singular()) {
+    //     $classes[] = sanitize_html_class($post->post_name);
+    // }
 
     return $classes;
 }
@@ -383,4 +383,4 @@ if( function_exists('acf_add_options_page') ) {
 }
 
 
-// TODO: INCLUDE AH HA CREATIVE BRANDED LOGIN SCREEN 
+// TODO: INCLUDE AH HA CREATIVE BRANDED LOGIN SCREEN
